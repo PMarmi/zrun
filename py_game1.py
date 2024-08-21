@@ -66,6 +66,10 @@ while jugando and vida > 0:
             print(f"Te quedan {vida} vidas")
             enemigos.remove(enemigo)
 
+        if enemigo.y + enemigo.alto > ALTO:
+            puntos += 1
+            enemigos.remove(enemigo)
+
     VENTANA.blit(texto_vida, (20,20))
     VENTANA.blit(texto_puntos, (20,60))
 
