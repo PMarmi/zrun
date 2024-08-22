@@ -1,0 +1,10 @@
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 23
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 90
+a - 25
+aaa - 80
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 31
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 64
+awd - 215
+a - 2
+j - 12
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 36

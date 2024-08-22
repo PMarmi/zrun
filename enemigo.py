@@ -9,6 +9,7 @@ class Enemigo:
         self.velocidad = 5
         self.color = "purple"
         self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)
+        self.vida = 3
     
     def dibujar(self, ventana):
         self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)

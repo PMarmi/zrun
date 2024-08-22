@@ -18,7 +18,7 @@ vida = 5
 puntos = 0
 
 tiempo_passado = 0
-tiempo_entre_enemigos = 550
+tiempo_entre_enemigos = 400
 
 cubo = Cubo((ANCHO/2),ALTO-125)
 enemigos = []
@@ -83,17 +83,23 @@ while jugando and vida > 0:
             print(f"Te quedan {vida} vidas")
             enemigos.remove(enemigo)
 
-        if enemigo.y + enemigo.alto > ALTO:
+        if enemigo.y > ALTO:
             puntos += 1
             enemigos.remove(enemigo)
+        opciones = [1, 2, 3]
+        probabilidades = [80, 15, 5]
+        
         for bala in balas:
             if pygame.Rect.colliderect(bala.rect,enemigo.rect):
-                enemigos.remove(enemigo)
+                resultado = random.choices(opciones, probabilidades)[0]
+                enemigo.vida -= resultado
                 balas.remove(bala)
+                puntos += 1
             if bala.actualizar():
                 balas.remove(bala)
                 
-   
+        if enemigo.vida <= 0:
+            enemigos.remove(enemigo)
    
     for bala in balas:
         bala.dibujar(VENTANA)
@@ -107,6 +113,13 @@ while jugando and vida > 0:
 
 
     pygame.display.update()
+
+pygame.quit()
+nombre = input("Introduce tu nombre: ")
+with open('1_game\puntuaciones.txt', 'a') as archivo:
+    archivo.write(f"{nombre} - {puntos}\n")
+
+
 quit()
 
 
