@@ -76,8 +76,8 @@ while jugando and vida > 0:
     
     for enemigo in enemigos:
         enemigo.dibujar(VENTANA)
-        enemigo.movimiento()    
-        
+        enemigo.movimiento()
+                
         if pygame.Rect.colliderect(cubo.rect,enemigo.rect):
             vida -= 1
             print(f"Te quedan {vida} vidas")
@@ -90,11 +90,15 @@ while jugando and vida > 0:
             if pygame.Rect.colliderect(bala.rect,enemigo.rect):
                 enemigos.remove(enemigo)
                 balas.remove(bala)
+            if bala.actualizar():
+                balas.remove(bala)
+                
    
    
     for bala in balas:
         bala.dibujar(VENTANA)
         bala.movimiento()
+
         
         
         
