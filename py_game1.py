@@ -5,8 +5,8 @@ from bala import Bala
 
 pygame.init()
 
-ANCHO = 1000
-ALTO = 800
+ANCHO = 600
+ALTO = 1000
 VENTANA = pygame.display.set_mode([ANCHO,ALTO])
 FPS = 60
 FUENTE = pygame.font.SysFont("Comic Sans", 40)
