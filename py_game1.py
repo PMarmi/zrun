@@ -2,14 +2,19 @@ import pygame, random
 from personaje import Cubo
 from enemigo import Enemigo
 from bala import Bala
-
+from item import Item
 pygame.init()
+
+pygame.mixer.init()
+
 
 ANCHO = 600
 ALTO = 1000
 VENTANA = pygame.display.set_mode([ANCHO,ALTO])
 FPS = 60
 FUENTE = pygame.font.SysFont("Comic Sans", 40)
+SONIDO_DISPARO = pygame.mixer.Sound('1_game/audio/bala.mp3')
+SONIDO_MUERTE = pygame.mixer.Sound('1_game/audio/zombie-death.mp3')
 
 jugando = True
 reloj = pygame.time.Clock()
@@ -18,22 +23,26 @@ vida = 5
 puntos = 0
 
 tiempo_passado = 0
+tiempo_passado_i = 0
 tiempo_entre_enemigos = 400
 
 cubo = Cubo((ANCHO/2),ALTO-125)
 enemigos = []
 balas = []
+items = []
 ultima_bala = 0
 tiempo_entre_balas = 500
+tiempo_entre_items = 200
 
 enemigos.append(Enemigo(ANCHO/2, 100))
-
+items.append(Item(ANCHO/2, 100))
 def crear_bala():
     global ultima_bala
     
     if pygame.time.get_ticks() - ultima_bala > tiempo_entre_balas:
         balas.append(Bala(cubo.rect.centerx,cubo.rect.centery))
         ultima_bala = pygame.time.get_ticks()
+        SONIDO_DISPARO.play()
         
         
 def gestionar_teclas(teclas):
@@ -51,11 +60,14 @@ def gestionar_teclas(teclas):
         
         
 while jugando and vida > 0:
-    
     tiempo_passado += reloj.tick(FPS)
+    tiempo_passado_i += reloj.tick(FPS)
     if tiempo_passado > tiempo_entre_enemigos:
         enemigos.append(Enemigo(random .randint(0,ANCHO),(-50)))
         tiempo_passado = 0
+    if tiempo_passado_i > tiempo_entre_items:
+        items.append(Item(random .randint(0,ANCHO),(-50)))
+        tiempo_passado_i = 0
 
     eventos = pygame.event.get()
     
@@ -77,12 +89,14 @@ while jugando and vida > 0:
     for enemigo in enemigos:
         enemigo.dibujar(VENTANA)
         enemigo.movimiento()
-                
+
         if pygame.Rect.colliderect(cubo.rect,enemigo.rect):
             vida -= 1
             print(f"Te quedan {vida} vidas")
+            SONIDO_MUERTE.play()
             enemigos.remove(enemigo)
-
+        
+        
         if enemigo.y > ALTO:
             puntos += 1
             enemigos.remove(enemigo)
@@ -95,17 +109,34 @@ while jugando and vida > 0:
                 enemigo.vida -= resultado
                 balas.remove(bala)
                 puntos += 1
-            if bala.actualizar():
-                balas.remove(bala)
                 
         if enemigo.vida <= 0:
+            SONIDO_MUERTE.play()
             enemigos.remove(enemigo)
    
     for bala in balas:
         bala.dibujar(VENTANA)
         bala.movimiento()
-
+        if bala.y < 0:
+            balas.remove(bala)
+            
+    for item in items:
+        item.dibujar(VENTANA)
+        item.movimiento()
         
+        if pygame.Rect.colliderect(item.rect,cubo.rect):
+            items.remove(item)
+            
+            if item.tipo == 1:
+                print(tiempo_entre_balas)
+                if tiempo_entre_balas >= 250:
+                    tiempo_entre_balas -= 50
+                    
+            elif item.tipo == 2:
+                if cubo.velocidad <= 22:
+                    cubo.velocidad += 2
+        if item.y > ALTO:
+            items.remove(item)
         
         
     VENTANA.blit(texto_vida, (20,20))

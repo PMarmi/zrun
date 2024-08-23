@@ -6,7 +6,7 @@ class Cubo:
         self.y = y
         self.ancho = 50
         self.alto = 50
-        self.velocidad = 7
+        self.velocidad = 10
         self.color = "red"
         self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)
         self.imagen = pygame.image.load("1_game/img/personaje.png")

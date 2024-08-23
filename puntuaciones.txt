@@ -1,19 +1,41 @@
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 13
-a - 5
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 23
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 5
-pepe - 42
-aa - 20
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/enemigo.py - 9
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 26
-a& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 51
-a - 14
-a - 19
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 131
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 7
+
+a - 96
+a - 126
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 191
+zombie - 119
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 11
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 1
 & C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 95
-a - 79
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/bala.py - 79
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 14
-& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 95
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 6
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 12
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 52
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 76
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 23
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 79
+aa - 100
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 24
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 67
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 34
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 2
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 15
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 28
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/personaje.py - 281
+Pau - 226
+Pau - 364
+a - 98
+a - 12
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 7
+a - 167
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 3
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+a - 6
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 65
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 24
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 35
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 30
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 10
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 34
+l - 33
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 36
