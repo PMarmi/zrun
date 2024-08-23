@@ -13,8 +13,8 @@ ALTO = 1000
 VENTANA = pygame.display.set_mode([ANCHO,ALTO])
 FPS = 60
 FUENTE = pygame.font.SysFont("Comic Sans", 40)
-SONIDO_DISPARO = pygame.mixer.Sound('1_game/audio/bala.mp3')
-SONIDO_MUERTE = pygame.mixer.Sound('1_game/audio/zombie-death.mp3')
+SONIDO_DISPARO = pygame.mixer.Sound('C:/Users/pauma/Desktop/1_game/audio/bala.mp3')
+SONIDO_MUERTE = pygame.mixer.Sound('C:/Users/pauma/Desktop/1_game/audio/zombie-death.mp3')
 
 jugando = True
 reloj = pygame.time.Clock()
