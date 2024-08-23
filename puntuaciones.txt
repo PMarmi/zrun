@@ -1,0 +1,32 @@
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 58
+a - 222
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 29
+a - 121
+a - 0
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+aw - 97
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 95
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 75
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 5
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 15
+pp - 17
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 7
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 2
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 9
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 4
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+a - 3
+a - 92
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 110
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 15
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 76
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 83
+<<<<<<< HEAD
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 46
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 96
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/enemigo.py - 0
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 8
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 13
+& C:/Users/pauma/AppData/Local/Programs/Python/Python312/python.exe c:/Python/1_game/py_game1.py - 0
+=======
+>>>>>>> d13c995ae9d6795807286305c99c7ee6f9fc1a53

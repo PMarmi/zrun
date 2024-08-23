@@ -25,6 +25,7 @@ puntos = 0
 tiempo_passado = 0
 tiempo_passado_i = 0
 tiempo_entre_enemigos = 400
+tiempo_entre_enemigos_base = 1000
 
 cubo = Cubo((ANCHO/2),ALTO-125)
 enemigos = []
@@ -32,7 +33,13 @@ balas = []
 items = []
 ultima_bala = 0
 tiempo_entre_balas = 500
-tiempo_entre_items = 200
+tiempo_entre_items = 10000
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d13c995ae9d6795807286305c99c7ee6f9fc1a53
 
 enemigos.append(Enemigo(ANCHO/2, 100))
 items.append(Item(ANCHO/2, 100))
@@ -62,13 +69,24 @@ def gestionar_teclas(teclas):
 while jugando and vida > 0:
     tiempo_passado += reloj.tick(FPS)
     tiempo_passado_i += reloj.tick(FPS)
+    
     if tiempo_passado > tiempo_entre_enemigos:
         enemigos.append(Enemigo(random .randint(0,ANCHO),(-50)))
         tiempo_passado = 0
+        tiempo_entre_enemigos = random.randint(50, tiempo_entre_enemigos_base)
+        if tiempo_entre_enemigos_base > 600:
+            tiempo_entre_enemigos_base -= 20
+<<<<<<< HEAD
+    
+=======
+        
+        
+        
+>>>>>>> d13c995ae9d6795807286305c99c7ee6f9fc1a53
     if tiempo_passado_i > tiempo_entre_items:
         items.append(Item(random .randint(0,ANCHO),(-50)))
         tiempo_passado_i = 0
-
+        
     eventos = pygame.event.get()
     
     teclas = pygame.key.get_pressed()
@@ -89,7 +107,7 @@ while jugando and vida > 0:
     for enemigo in enemigos:
         enemigo.dibujar(VENTANA)
         enemigo.movimiento()
-
+        
         if pygame.Rect.colliderect(cubo.rect,enemigo.rect):
             vida -= 1
             print(f"Te quedan {vida} vidas")
