@@ -34,12 +34,9 @@ items = []
 ultima_bala = 0
 tiempo_entre_balas = 500
 tiempo_entre_items = 10000
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> d13c995ae9d6795807286305c99c7ee6f9fc1a53
 
 enemigos.append(Enemigo(ANCHO/2, 100))
 items.append(Item(ANCHO/2, 100))
@@ -76,13 +73,10 @@ while jugando and vida > 0:
         tiempo_entre_enemigos = random.randint(50, tiempo_entre_enemigos_base)
         if tiempo_entre_enemigos_base > 600:
             tiempo_entre_enemigos_base -= 20
-<<<<<<< HEAD
     
-=======
         
         
         
->>>>>>> d13c995ae9d6795807286305c99c7ee6f9fc1a53
     if tiempo_passado_i > tiempo_entre_items:
         items.append(Item(random .randint(0,ANCHO),(-50)))
         tiempo_passado_i = 0
