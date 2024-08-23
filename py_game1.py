@@ -128,7 +128,6 @@ while jugando and vida > 0:
             items.remove(item)
             
             if item.tipo == 1:
-                print(tiempo_entre_balas)
                 if tiempo_entre_balas >= 250:
                     tiempo_entre_balas -= 50
                     
