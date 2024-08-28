@@ -174,16 +174,12 @@ while jugando and vida > 0:
             if item.tipo == 1:
                 if tiempo_entre_balas >= 250:
                     tiempo_entre_balas -= 50
-                    print(tiempo_entre_balas)
             if item.tipo == 2:
                 if cubo.velocidad <= 28:
                     cubo.velocidad += 2
-                    print(cubo.velocidad)
             if item.tipo == 3:
                 if vida <= 6:
                     vida += 1
-                    print(vida)
-                
         if item.y > ALTO:
             items.remove(item)
         
