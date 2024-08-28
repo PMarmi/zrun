@@ -22,7 +22,13 @@ class Enemigo:
         
     def actualizar_velocidad(self, puntos, w_presionada):
         
-        if puntos >= 300:
+        if puntos >= 700:
+            self.velocidad = 43
+        elif puntos >= 600:
+            self.velocidad = 37
+        elif puntos >= 400:
+            self.velocidad = 35
+        elif puntos >= 300:
             self.velocidad = 32
         elif puntos >= 200:
             self.velocidad = 27

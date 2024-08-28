@@ -45,7 +45,6 @@ def crear_bala():
         SONIDO_DISPARO.play()
 
 w_presionada = False
-
 def gestionar_teclas(teclas):
     if teclas[pygame.K_d]:
         if cubo.x + cubo.ancho <= ANCHO:
@@ -60,10 +59,10 @@ def gestionar_teclas(teclas):
 
 def mostrar_fin_juego():
     global jugando
-    jugando = False  # Para detener el bucle principal del juego
+    jugando = False 
 
-    nombre = ""  # Cadena para almacenar el nombre del jugador
-    esperando_nombre = True  # Variable para controlar la entrada del nombre
+    nombre = ""  
+    esperando_nombre = True  
 
     while esperando_nombre:
         for evento in pygame.event.get():
