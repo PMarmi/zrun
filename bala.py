@@ -6,10 +6,10 @@ class Bala:
         self.y = y
         self.ancho = 10
         self.alto = 20
-        self.velocidad = 10
+        self.velocidad = 40
         self.color = "white"
         self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)
-        self.imagen = pygame.image.load("C:/Users/pauma/Desktop/1_game/img/bala.png")
+        self.imagen = pygame.image.load("1_game/img/bala.png")
         self.imagen = pygame.transform.scale(self.imagen, (10, 10))
 
     
