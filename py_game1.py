@@ -145,7 +145,7 @@ while jugando and vida > 0:
             enemigos.remove(enemigo)
         
         opciones = [1, 2, 3]
-        probabilidades = [45, 45, 10]
+        probabilidades = [20, 65, 15]
         
         for bala in balas:
             if pygame.Rect.colliderect(bala.rect, enemigo.rect):
@@ -174,15 +174,12 @@ while jugando and vida > 0:
             if item.tipo == 1:
                 if tiempo_entre_balas >= 250:
                     tiempo_entre_balas -= 50
-                    print(tiempo_entre_balas)
             if item.tipo == 2:
                 if cubo.velocidad <= 28:
                     cubo.velocidad += 2
-                    print(cubo.velocidad)
             if item.tipo == 3:
                 if vida <= 6:
                     vida += 1
-                    print(vida)
                 
         if item.y > ALTO:
             items.remove(item)
