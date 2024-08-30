@@ -1,27 +1,14 @@
-import pygame
-class Enemigo:
+from entidad import Entidad
+class Enemigo(Entidad):
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.ancho = 65
-        self.alto = 65
-        self.velocidad = 3
-        self.color = "purple"
-        self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)
+        super().__init__(x, y, 65, 65, 3, "img/enemigo.png")
         self.vida = 3
-        self.imagen = pygame.image.load("img/enemigo.png")
-        self.imagen = pygame.transform.scale(self.imagen, (65, 65))
-    
-    def dibujar(self, ventana):
-        self.rect = pygame.Rect(self.x,self.y,self.ancho,self.alto)
-        # pygame.draw.rect(ventana,self.color,self.rect)
-        ventana.blit(self.imagen, (self.x, self.y))
     
     def movimiento(self):
         self.y += self.velocidad
+        self.rect.topleft = (self.x, self.y)
         
     def actualizar_velocidad(self, puntos, w_presionada):
-        
         if puntos >= 700:
             self.velocidad = 43
         elif puntos >= 600:
@@ -43,6 +30,6 @@ class Enemigo:
         elif puntos >= 30:
             self.velocidad = 10
         else:
-            self.velocidad = 5  # Velocidad base o inicial
+            self.velocidad = 5
         if w_presionada:
             self.velocidad *= 2
