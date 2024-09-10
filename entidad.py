@@ -16,4 +16,4 @@ class Entidad:
         ventana.blit(self.imagen, (self.x, self.y))
 
     def movimiento(self):
-        pass  # Este método será implementado por las subclases
+        pass
