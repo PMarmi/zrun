@@ -111,7 +111,7 @@ def main():
             "Cada zombie que matas te da puntos.",
             "Recoge items para mejorar tu personaje.",
             "",
-            "Presiona ESC para volver al menú."
+            "Presiona M para volver al menú."
         ]
 
         # Renderizar cada línea de texto y mostrarla en la pantalla
@@ -130,7 +130,7 @@ def main():
                     quit()
 
                 if evento.type == pygame.KEYDOWN:
-                    if evento.key == pygame.K_ESCAPE:
+                    if evento.key == pygame.K_m:
                         return
 
     def mostrar_fin_juego():
