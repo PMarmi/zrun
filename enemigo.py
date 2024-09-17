@@ -28,8 +28,8 @@ class Enemigo(Entidad):
         elif puntos >= 50:
             self.velocidad = 15
         elif puntos >= 30:
-            self.velocidad = 10
+            self.velocidad = 12
         else:
-            self.velocidad = 5
+            self.velocidad = 7
         if w_presionada:
-            self.velocidad *= 2
+            self.velocidad *= 5
