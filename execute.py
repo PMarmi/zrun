@@ -33,7 +33,7 @@ def main():
     items = []
     ultima_bala = 0
     tiempo_entre_balas = 500
-    tiempo_entre_items = 7500
+    tiempo_entre_items = 5500
 
     enemigos.append(Enemigo(ANCHO / 2, 100))
     items.append(Item(ANCHO / 2, 100))
@@ -367,8 +367,8 @@ def main():
                             enemigo.vida -= resultado
 
                         if enemigo.vida <= 0:
-                            SONIDO_MUERTE.play()
                             enemigos.remove(enemigo)
+                            SONIDO_MUERTE.play()
                             puntos += 5
 
                 for bala in balas:
