@@ -1,4 +1,4 @@
-import pygame, random
+import pygame, random, sys
 from personaje import Cubo
 from enemigo import Enemigo
 from bala import Bala
@@ -129,7 +129,7 @@ def main():
             for evento in pygame.event.get():
                 if evento.type == pygame.QUIT:
                     pygame.quit()
-                    quit()
+                    sys.exit() 
 
                 if evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_m:
@@ -171,7 +171,7 @@ def main():
             for evento in pygame.event.get():
                 if evento.type == pygame.QUIT:
                     pygame.quit()
-                    quit()
+                    sys.exit() 
 
                 if evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_m:  # Volver al menú principal
@@ -194,7 +194,7 @@ def main():
                 if evento.type == pygame.QUIT:
                     esperando_nombre = False
                     pygame.quit()
-                    quit()
+                    sys.exit() 
 
                 if evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_RETURN:
@@ -238,7 +238,7 @@ def main():
                 if evento.type == pygame.QUIT:
                     jugando = False
                     pygame.quit()
-                    quit()
+                    sys.exit() 
 
                 if evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_t:
@@ -248,7 +248,8 @@ def main():
                     elif evento.key == pygame.K_ESCAPE:
                         jugando = False
                         pygame.quit()
-                        quit()
+                        sys.exit() 
+
 
     def mostrar_pantalla_pausa():
         overlay = pygame.Surface((ANCHO, ALTO))
@@ -282,12 +283,13 @@ def main():
                 if evento.type == pygame.QUIT:
                     jugando = False
                     pygame.quit()
+                    sys.exit() 
+        
             if teclas[pygame.K_RETURN]:
                 ESTADO_JUEGO = "JUGANDO"
             if teclas[pygame.K_ESCAPE]:
                 jugando = False
                 pygame.quit()
-                quit()
             if teclas[pygame.K_i]:
                 mostrar_instrucciones()
             if teclas[pygame.K_t]:
@@ -312,6 +314,7 @@ def main():
                     if evento.type == pygame.QUIT:
                         jugando = False
                         pygame.quit()
+                        sys.exit() 
 
                 gestionar_teclas(teclas)
 
