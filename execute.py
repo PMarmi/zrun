@@ -90,11 +90,13 @@ def main():
         texto_iniciar = FUENTE.render("Presiona ENTER para empezar", True, "white")
         texto_salir = FUENTE.render("Presiona ESC para salir", True, "white")
         texto_instrucciones = FUENTE.render("Presiona I para instrucciones", True, "white")
+        texto_top = FUENTE.render("Presiona 'T' para ver el Top de Puntuaciones", True, "white")
 
         VENTANA.blit(texto_titulo, (ANCHO/2 - texto_titulo.get_width()/2, ALTO/2 - 150))
         VENTANA.blit(texto_iniciar, (ANCHO/2 - texto_iniciar.get_width()/2, ALTO/2 - 50))
         VENTANA.blit(texto_salir, (ANCHO/2 - texto_salir.get_width()/2, ALTO/2 + 50))
         VENTANA.blit(texto_instrucciones, (ANCHO/2 - texto_instrucciones.get_width()/2, ALTO/2 + 150))
+        VENTANA.blit(texto_top, (ANCHO/2 - texto_top.get_width()/2, ALTO/2 + 250))
 
         pygame.display.update()
 
@@ -132,7 +134,55 @@ def main():
                 if evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_m:
                         return
+    def mostrar_menu_top():
+        VENTANA.fill("black")
 
+        # Leer las puntuaciones desde el archivo
+        try:
+            with open('puntuaciones.txt', 'r') as archivo:
+                puntuaciones = archivo.readlines()
+        except FileNotFoundError:
+            puntuaciones = []
+
+        # Mostrar las puntuaciones en pantalla
+        texto_titulo = FUENTE.render("Top de Puntuaciones", True, "white")
+        VENTANA.blit(texto_titulo, (ANCHO/2 - texto_titulo.get_width()/2, 50))
+
+        if puntuaciones:
+            y_offset = 150
+            for puntuacion in puntuaciones:
+                texto_puntuacion = FUENTE.render(puntuacion.strip(), True, "white")
+                VENTANA.blit(texto_puntuacion, (ANCHO/2 - texto_puntuacion.get_width()/2, y_offset))
+                y_offset += 30
+        else:
+            texto_no_puntuaciones = FUENTE.render("No hay puntuaciones aún.", True, "white")
+            VENTANA.blit(texto_no_puntuaciones, (ANCHO/2 - texto_no_puntuaciones.get_width()/2, 150))
+
+        texto_eliminar = FUENTE.render("Presiona 'R' para reiniciar las puntuaciones", True, "white")
+        texto_volver = FUENTE.render("Presiona 'M' para volver al menú", True, "white")
+        VENTANA.blit(texto_eliminar, (ANCHO/2 - texto_eliminar.get_width()/2, ALTO - 100))
+        VENTANA.blit(texto_volver, (ANCHO/2 - texto_volver.get_width()/2, ALTO - 50))
+
+        pygame.display.update()
+
+        # Esperar eventos
+        esperando = True
+        while esperando:
+            for evento in pygame.event.get():
+                if evento.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+
+                if evento.type == pygame.KEYDOWN:
+                    if evento.key == pygame.K_m:  # Volver al menú principal
+                        esperando = False
+                    if evento.key == pygame.K_r:  # Eliminar las puntuaciones
+                        with open('puntuaciones.txt', 'w') as archivo:
+                            archivo.write("")  # Sobrescribir el archivo con un contenido vacío
+                        puntuaciones = []  # Limpiar lista de puntuaciones
+                        VENTANA.fill("black")  # Limpiar la pantalla después de borrar
+                        mostrar_menu_top()  # Refrescar pantalla mostrando el menú sin puntuaciones
+    # Refrescar pantalla
     def mostrar_fin_juego():
         nonlocal jugando
 
@@ -176,9 +226,12 @@ def main():
             VENTANA.fill("black")
             texto_reiniciar = FUENTE.render("Presiona ENTER para volver a jugar", True, "white")
             texto_salir = FUENTE.render("Presiona ESC para salir", True, "white")
+            texto_top = FUENTE.render("Presiona 'T' para ver el Top de Puntuaciones", True, "white")
 
             VENTANA.blit(texto_reiniciar, (ANCHO/2 - texto_reiniciar.get_width()/2, ALTO/2 - 50))
             VENTANA.blit(texto_salir, (ANCHO/2 - texto_salir.get_width()/2, ALTO/2 + 50))
+            VENTANA.blit(texto_top, (ANCHO/2 - texto_top.get_width()/2, ALTO/2 + 100))
+
             pygame.display.update()
 
             for evento in pygame.event.get():
@@ -188,6 +241,8 @@ def main():
                     quit()
 
                 if evento.type == pygame.KEYDOWN:
+                    if evento.key == pygame.K_t:
+                        mostrar_menu_top()
                     if evento.key == pygame.K_RETURN:
                         return
                     elif evento.key == pygame.K_ESCAPE:
@@ -227,7 +282,6 @@ def main():
                 if evento.type == pygame.QUIT:
                     jugando = False
                     pygame.quit()
-
             if teclas[pygame.K_RETURN]:
                 ESTADO_JUEGO = "JUGANDO"
             if teclas[pygame.K_ESCAPE]:
@@ -236,6 +290,8 @@ def main():
                 quit()
             if teclas[pygame.K_i]:
                 mostrar_instrucciones()
+            if teclas[pygame.K_t]:
+                mostrar_menu_top()
 
         if ESTADO_JUEGO == "JUGANDO":
             tiempo_passado = 0
