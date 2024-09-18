@@ -367,8 +367,8 @@ def main():
                             enemigo.vida -= resultado
 
                         if enemigo.vida <= 0:
-                            SONIDO_MUERTE.play()
                             enemigos.remove(enemigo)
+                            SONIDO_MUERTE.play()
                             puntos += 5
 
                 for bala in balas:
